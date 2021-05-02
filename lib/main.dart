@@ -11,14 +11,23 @@ void main() {
   runApp(Bootstrap());
 }
 
+class LocalProvider extends ChangeNotifier {
+  Locale value = Locale('ar', '');
+
+  change(Locale locale) {
+    value = locale;
+    notifyListeners();
+  }
+}
+
 class Bootstrap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<String>(
-          create: (_) => "",
-        ),
+        ChangeNotifierProvider<LocalProvider>(
+          create: (context) => LocalProvider(),
+        )
       ],
       child: App(),
     );
@@ -29,11 +38,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      locale: Locale('ar', ''),
+      locale: Provider.of<LocalProvider>(context).value,
       supportedLocales: [
         Locale('ar', ''), // Arabic, no country code
         Locale('en', ''), // English, no country code

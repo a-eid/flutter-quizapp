@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quizapp/main.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -30,6 +32,22 @@ class Home extends StatelessWidget {
               break;
           }
         },
+      ),
+      body: Column(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Provider.of<LocalProvider>(context).change(Locale('ar', ''));
+            },
+            child: Text('Arabic'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Provider.of<LocalProvider>(context).change(Locale('en', ''));
+            },
+            child: Text('English'),
+          ),
+        ],
       ),
     );
   }
