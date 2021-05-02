@@ -3,6 +3,7 @@ import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'screens/screens.dart' as Screens;
 
@@ -28,6 +29,17 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      locale: Locale('ar', ''),
+      supportedLocales: [
+        Locale('ar', ''), // Arabic, no country code
+        Locale('en', ''), // English, no country code
+      ],
+
+      // supportedLocales: [Locale('en', 'US')],
       // init firebase analytics so we get automatic reporting from firebase.
       navigatorObservers: [
         FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())
