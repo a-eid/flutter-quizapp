@@ -4,17 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 // import 'package:quizapp/tutorials/Main.dart';
 // import 'package:quizapp/tutorials/navigation/main.dart';
-import 'package:quizapp/tutorials/state_management/main.dart'
-    as StateManagement;
+// import 'package:quizapp/tutorials/state_management/main.dart'
+//     as StateManagement;
+
+import 'tutorials/main.dart' as tuts;
 
 import 'screens/screens.dart' as Screens;
 
 void main() {
+  tuts.main();
   // runApp(App());
   // runApp(Main());
-  runApp(StateManagement.App());
+  // runApp(StateManagement.App());
 }
 
 class LocalProvider extends ChangeNotifier {
