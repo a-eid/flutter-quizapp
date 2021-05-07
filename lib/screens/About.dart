@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/shared/shared.dart';
 
 class About extends StatelessWidget {
   @override
@@ -6,6 +7,9 @@ class About extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('About'),
+      ),
+      body: Container(
+        child: LanguageSwitcher(),
       ),
     );
   }

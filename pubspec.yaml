@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  intl: ^0.17.0
   cupertino_icons: ^1.0.2
   firebase_core: ^1.1.0
   firebase_analytics: ^8.0.2
@@ -36,6 +37,7 @@ dependencies:
   provider: ^5.0.0
   font_awesome_flutter: ^9.0.0
   google_fonts: ^2.0.0
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:

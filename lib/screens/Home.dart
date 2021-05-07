@@ -34,20 +34,7 @@ class Home extends StatelessWidget {
         },
       ),
       body: Column(
-        children: [
-          ElevatedButton(
-            onPressed: () {
-              Provider.of<LocalProvider>(context).change(Locale('ar', ''));
-            },
-            child: Text('Arabic'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Provider.of<LocalProvider>(context).change(Locale('en', ''));
-            },
-            child: Text('English'),
-          ),
-        ],
+        children: [],
       ),
     );
   }
