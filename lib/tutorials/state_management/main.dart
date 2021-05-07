@@ -6,10 +6,11 @@ import './store/counter.dart';
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BlocHome(),
-      // home: MobxHome(),
-    );
+    return Bloc();
+    // return MaterialApp(
+    //   home: Bloc(),
+    //   // home: MobxHome(),
+    // );
   }
 }
 
