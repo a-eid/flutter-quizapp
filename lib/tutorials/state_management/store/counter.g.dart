@@ -38,6 +38,17 @@ mixin _$Counter on _Counter, Store {
   }
 
   @override
+  void reset() {
+    final _$actionInfo =
+        _$_CounterActionController.startAction(name: '_Counter.reset');
+    try {
+      return super.reset();
+    } finally {
+      _$_CounterActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 value: ${value}
