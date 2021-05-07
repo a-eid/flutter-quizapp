@@ -14,8 +14,10 @@
 // }
 
 import 'package:flutter/material.dart';
-import './bloc_counter/counter.dart';
+import './bloc_todo/bloc_todo.dart';
+// import './bloc_counter/counter.dart';
 
 void main() {
-  runApp(Counter());
+  // runApp(Counter());
+  runApp(BlocTodo());
 }
